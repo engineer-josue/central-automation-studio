@@ -1074,10 +1074,21 @@ function assignSSIDs() {
 	var csvDataBuild = [];
 
 	// Get Selected SSIDs
-	var select = document.getElementById('wlanselector');
+	/* === Changing code as this was pushing the SSIDs in the wrong format Josh R***
+ 	var select = document.getElementById('wlanselector');
 	var selectedSSIDs = [...select.selectedOptions].map(option => option.value);
 	selectedSSIDstring = selectedSSIDs.join(',');
 	if (document.getElementById('selectAllSSIDs').checked) selectedSSIDstring = '*';
+        */
+	// Get Selected SSIDs REVISED
+ 	var select = document.getElementById('wlanselector');
+	var selectedSSIDs = [...select.selectedOptions].map(option => option.value.replace(/"/g, ''));
+	selectedSSIDstring = selectedSSIDs.join(',');
+
+	// Check for 'selectAllSSIDs'
+	if (document.getElementById('selectAllSSIDs').checked) {
+   	 selectedSSIDstring = '*';
+	}
 
 	// Get selected APs
 	for (const [key, value] of Object.entries(selectedDevices)) {
