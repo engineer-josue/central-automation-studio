@@ -23,7 +23,7 @@ Note: Using WSL has not been tested.<br>
 1. Install Docker: https://docs.docker.com/get-docker/
 
 2. Pull the image:<br>
-    `sudo docker pull arubahpe/central-automation-studio`
+    `sudo docker pull joshruiz1985/central-automation-studio`
 
 3. Start a container using the image you just built.<br>
     - With HTTP<br>
