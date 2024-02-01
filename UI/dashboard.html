@@ -46,6 +46,13 @@ Aaron Scott (WiFi Downunder) 2023
 </head>
 
 <body>
+	<script type="module">
+		import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+		Chatbot.init({
+			chatflowid: "eca0b4cc-901a-49ef-96c5-6e04ea55b493",
+			apiHost: "http://localhost:3000",
+		})
+	</script>
     <div class="wrapper">  
         <div class="main-panel">
             <!-- Navbar -->
